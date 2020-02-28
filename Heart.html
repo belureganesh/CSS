@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html> 
+
+<head> 
+	<style> 
+   
+    .heart:focus ~ .heart:before, .heart:hover ~ .heart:before, .heart:focus ~ .heart:after, .heart:hover ~ .heart:after {
+      background:  #6ef1cd;
+    }
+
+    .container:not(:focus-within):not(:hover) .heart:before, .container:not(:focus-within):not(:hover) .heart:after {
+      background:  #f7ffb5;
+    }  
+
+
+    body {
+      justify-content: center;
+      align-items: center;
+      background: #fdfdff;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .container {
+      padding: 0 2rem;
+      display: flex;
+      width: 100%;
+    }
+
+		.heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+    }
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+	</style> 
+</head> 
+
+
+<body> 
+  <div class="container">
+    <a href="#" class="heart"></a>
+    <a href="#" class="heart"></a>
+    <a href="#" class="heart"></a>
+    <a href="#" class="heart"></a>
+    <a href="#" class="heart"></a>
+  </div>
+</body> 
+
+</html> 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html> 
+
+<head> 
+	<style> 
+    /*.star-six {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+      position: relative;
+    }
+    .star-six:after {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: -50px;
+    }*/
+
+
+
+    .star-five:focus ~ .star-five:after, .star-five:hover ~ .star-five:after, .star-five:focus ~ .star-five, .star-five:hover ~ .star-five {
+      border-bottom: 70px solid #6ef1cd;
+    }
+    .star-five:focus ~ .star-five:before, .star-five:hover ~ .star-five:before {
+      border-bottom: 80px solid #6ef1cd;
+    }
+
+
+    .container:not(:focus-within):not(:hover) .star-five:after, .container:not(:focus-within):not(:hover) .star-five{
+      border-bottom: 70px solid #f7ffb5;    
+    } 
+    .container:not(:focus-within):not(:hover) .star-five:before {
+      border-bottom: 80px solid #f7ffb5;    
+    }   
+
+
+    body {
+      justify-content: center;
+      align-items: center;
+      background: #fdfdff;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .container {
+      padding: 0 2rem;
+      display: flex;
+      width: 100%;
+    }
+
+		.star-five {
+      text-decoration: none;
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: red;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+    .star-five:before {
+      border-bottom: 80px solid red;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    .star-five:after {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+	</style> 
+</head> 
+
+
+<body> 
+	 
+ <!--  <div class="star-five"></div>
+  <div class="star-six"></div> -->
+
+  <div class="container">
+    <a href="#" class="star-five"></a>
+    <a href="#" class="star-five"></a>
+    <a href="#" class="star-five"></a>
+    <a href="#" class="star-five"></a>
+  </div>
+
+
+</body> 
+
+</html> 
